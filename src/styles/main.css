@@ -1,0 +1,48 @@
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.n-tabs-tab--active, .n-tabs-tab:hover{
+  background-color: #165dff17 !important;
+}
+
+html.dark {
+  background: #18181C;
+  color-scheme: dark;
+}
+
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: rgb(13,148,136);
+  opacity: 0.75;
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+/* fade-slide */
+.fade-slide-leave-active,
+.fade-slide-enter-active {
+	transition: all 0.3s;
+}
+.fade-slide-enter-from {
+	opacity: 0;
+	transform: translateX(-30px);
+}
+.fade-slide-leave-to {
+	opacity: 0;
+	transform: translateX(30px);
+}
+
