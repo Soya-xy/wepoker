@@ -36,14 +36,14 @@ export default ({ mode }: ConfigEnv) => {
     server: {
       host: '0.0.0.0',
       cors: true,
-      // proxy: {
-      //   '/api': {
-      //     // rewrite: path => path.replace(/^\/api/, ''),
-      //     target: `http://10.141.4.251:2204`,
-      //     // target: `http://${ENV.VITE_API_URL}`,
-      //   },
+      proxy: {
+        '/agentApi': {
+          // rewrite: path => path.replace(/^\/api/, ''),
+          target: `http://frp.xiaoyio.com/`,
+          // target: `http://${ENV.VITE_API_URL}`,
+        },
 
-      // },
+      },
     },
     plugins: [
       VueMacros({

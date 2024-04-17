@@ -1,9 +1,8 @@
 <script setup lang='ts'>
 import banner from '../assets/login-banner.png'
 
-const userStore = useUserStore()
+const user = useUserStore()
 const Message = useMessage()
-const router = useRouter()
 const username = ref('')
 const password = ref('')
 const usernameError = ref('')
@@ -22,24 +21,24 @@ async function login() {
     passwordError.value = ''
   }
 
-  const res = await loginApi({
+  const detail = await loginApi({
     username: username.value,
     password: password.value,
   })
-  // console.log('🚀 ~ login ~ detail:', detail)
-  // if (detail.code === 200) {
-  //   user.user = detail.data
-  //   user.token = detail.data.token
-  //   Message.success('登录成功')
-  //   setTimeout(() => {
-  console.log('🚀 ~ login ~ res:', res)
-  //     location.href = `/`
-  //   }, 500)
-  // }
+  if (detail.code === 200) {
+    user.user = detail.data
+    user.token = detail.data.token
+    localStorage.setItem('user',JSON.stringify(user.user))
+    localStorage.setItem('token',user.token)
+    Message.success('登录成功')
+    setTimeout(() => {
+      location.href = `/`
+    }, 500)
+  }
 
-  // else {
-  //   Message.error(detail.msg)
-  // }
+  else {
+    Message.error(detail.msg)
+  }
 }
 </script>
 

@@ -1,9 +1,10 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export const useUserStore = defineStore('user', () => {
-  const user = ref<any>()
+  const user = ref<any>(localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')!) : {})
+  console.log("🚀 ~ useUserStore ~ user:", user)
   const station = ref<any>()
-  const token = ref<string>('')
+  const token = ref<any>(localStorage.getItem('token') || '')
 
   function setInfo(userInfo: any) {
     user.value = userInfo.user

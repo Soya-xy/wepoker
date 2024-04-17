@@ -13,7 +13,9 @@ export default defineConfig({
   safelist: [
     'i-carbon:chart-candlestick',
     'i-mdi:application-edit-outline',
-    'i-mdi:clipboard-text-search',
+    'i-carbon:user',
+    'i-carbon:pedestrian-family',
+    'i-carbon:wallet',
     'i-mdi:home-variant',
   ],
   shortcuts: {

@@ -19,8 +19,10 @@ const options = [
   },
 ]
 function handleSelect(e: string) {
-  if (e === 'exit')
+  if (e === 'exit'){
+    localStorage.clear()
     router.replace('/login')
+  }
 }
 </script>
 
