@@ -7,7 +7,8 @@ import { router } from '~/modules/router'
 
 // const baseURL = '/agentApi'
 // const baseURL = 'https://frp.xiaoyio.com'
-const baseURL = 'http://127.0.0.1:8081/agentApi'
+const baseURL = 'https://admin.ttp8088.xyz/agentApi'
+// const baseURL = 'http://127.0.0.1:8081/agentApi'
 const { message } = createDiscreteApi(['message'])
 export function alovaInstance(base = baseURL) {
   return createAlova({
