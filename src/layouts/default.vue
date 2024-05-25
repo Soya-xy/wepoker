@@ -42,7 +42,7 @@ const height = computed(() => {
                 <component
                   :is="Component"
                   :key="route.path"
-                  class="flex-grow bg-#f6f9f8 p-16px transition duration-300 ease-in-out dark:bg-#101014"
+                  class="flex-grow bg-#f6f9f8 p-16px transition duration-300 ease-in-out dark:bg-#101014  w-1100px sm:w-full"
                 />
               </keep-alive>
             </transition>

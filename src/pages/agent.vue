@@ -124,7 +124,7 @@ function addItem() {
 <template>
   <div>
     <n-card title="搜索">
-      <n-form ref="formRef" inline label-placement="left" :model="formValue">
+      <n-form ref="formRef" inline label-placement="left" :model="formValue"  class="!flex-col !sm:flex-row">
         <n-form-item label="代理ID" path="agentPid">
           <n-input v-model:value="formValue.agentPid" placeholder="输入代理ID" />
         </n-form-item>

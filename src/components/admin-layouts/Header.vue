@@ -37,7 +37,7 @@ function handleSelect(e: string) {
         @click="config.collapsedSide = !config.collapsedSide"
       />
       <div flex items-center>
-        <n-time :time="time" class="mr-5 text-24px" />
+        <!-- <n-time :time="time" class="mr-5 text-24px" /> -->
 
         <n-icon
           size="30" hover="text-blue-600 cursor-pointer" :class="{

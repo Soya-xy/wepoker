@@ -57,12 +57,12 @@ init()
         <p mr-5>搜索日期</p>
         <n-date-picker v-model:value="range" type="datetimerange" clearable w-100 @confirm="confirm" />
       </div>
-      <n-space justify="space-between" align="center">
-        <div flex items-center>
-          <n-qr-code value="text" />
+      <n-space justify="space-between" align="center" :wrap-item="false">
+        <div flex flex-col sm="flex-row" items-center w-full>
+          <n-qr-code value="text" my-2 sm:my-0 />
           <div ml5>
             <p text-xl my3>当前账号：{{ user.username }}</p>
-            <n-tag size="large" type="info">
+            <n-tag type="info">
               {{ link }}
               <template #avatar>
                 <n-icon i-carbon:copy cursor-pointer @click="copyText" />

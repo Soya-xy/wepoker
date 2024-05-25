@@ -17,7 +17,7 @@ export const useConfigStore = defineStore('config', () => {
   })
 
   const config = ref({
-    collapsedSide: false,
+    collapsedSide: true,
   })
 
   return {

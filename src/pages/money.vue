@@ -100,7 +100,7 @@ async function submitCallback() {
 <template>
   <div>
     <n-card title="搜索">
-      <n-form ref="formRef" inline label-placement="left" :label-width="80" :model="formValue">
+      <n-form ref="formRef" inline label-placement="left" :label-width="80" :model="formValue"  class="!flex-col !sm:flex-row">
         <n-form-item label="用户ID" path="userId">
           <n-input v-model:value="formValue.userId" placeholder="输入会员ID" />
         </n-form-item>

@@ -69,6 +69,8 @@ function filtersChange({ createTime: filterData }: any) {
 </script>
 
 <template>
-  <n-data-table :columns="columns" :data="data" :pagination="pagination" :bordered="false"
+  <div class="sm:w-full w-1000px">
+    <n-data-table :columns="columns" :data="data" :pagination="pagination" :bordered="false"
     @update:filters="filtersChange" :remote="true" :loading="loading" />
+  </div>
 </template>

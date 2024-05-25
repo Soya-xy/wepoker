@@ -77,7 +77,7 @@ function handleValidateClick(e: MouseEvent) {
       </n-space>
     </div>
     <n-card title="搜索">
-      <n-form ref="formRef" inline label-placement="left" :label-width="80" :model="formValue">
+      <n-form ref="formRef" inline label-placement="left" :label-width="80" :model="formValue" class="!flex-col !sm:flex-row">
         <n-form-item label="ID" path="id">
           <n-input v-model:value="formValue.id" placeholder="输入会员ID" />
         </n-form-item>
@@ -95,7 +95,7 @@ function handleValidateClick(e: MouseEvent) {
       </n-form>
     </n-card>
 
-    <n-card title="用户列表">
+    <n-card title="用户列表" class="w-full">
       <IndexTable :data="list" :pagination="pagination" :loading="loading"></IndexTable>
     </n-card>
   </div>
