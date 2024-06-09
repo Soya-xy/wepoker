@@ -43,6 +43,7 @@ declare global {
   const extendRef: typeof import('@vueuse/core')['extendRef']
   const fake: typeof import('./composables/const')['fake']
   const financeManageList: typeof import('./service/api/index')['financeManageList']
+  const gameRegister: typeof import('./service/api/index')['gameRegister']
   const getCamera: typeof import('./service/api/index')['getCamera']
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
@@ -50,6 +51,7 @@ declare global {
   const getList: typeof import('./service/api/index')['getList']
   const getOrderFlow: typeof import('./service/api/index')['getOrderFlow']
   const getUserInfo: typeof import('./service/api/index')['getUserInfo']
+  const getVerifyCode: typeof import('./service/api/index')['getVerifyCode']
   const h: typeof import('vue')['h']
   const ignorableWatch: typeof import('@vueuse/core')['ignorableWatch']
   const indexApi: typeof import('./service/api/index')['indexApi']
@@ -366,9 +368,11 @@ declare module 'vue' {
     readonly extendRef: UnwrapRef<typeof import('@vueuse/core')['extendRef']>
     readonly fake: UnwrapRef<typeof import('./composables/const')['fake']>
     readonly financeManageList: UnwrapRef<typeof import('./service/api/index')['financeManageList']>
+    readonly gameRegister: UnwrapRef<typeof import('./service/api/index')['gameRegister']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly getUserInfo: UnwrapRef<typeof import('./service/api/index')['getUserInfo']>
+    readonly getVerifyCode: UnwrapRef<typeof import('./service/api/index')['getVerifyCode']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
     readonly ignorableWatch: UnwrapRef<typeof import('@vueuse/core')['ignorableWatch']>
     readonly indexApi: UnwrapRef<typeof import('./service/api/index')['indexApi']>
@@ -675,9 +679,11 @@ declare module '@vue/runtime-core' {
     readonly extendRef: UnwrapRef<typeof import('@vueuse/core')['extendRef']>
     readonly fake: UnwrapRef<typeof import('./composables/const')['fake']>
     readonly financeManageList: UnwrapRef<typeof import('./service/api/index')['financeManageList']>
+    readonly gameRegister: UnwrapRef<typeof import('./service/api/index')['gameRegister']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly getUserInfo: UnwrapRef<typeof import('./service/api/index')['getUserInfo']>
+    readonly getVerifyCode: UnwrapRef<typeof import('./service/api/index')['getVerifyCode']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
     readonly ignorableWatch: UnwrapRef<typeof import('@vueuse/core')['ignorableWatch']>
     readonly indexApi: UnwrapRef<typeof import('./service/api/index')['indexApi']>

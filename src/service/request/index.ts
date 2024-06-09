@@ -25,19 +25,28 @@ export function alovaInstance(base = baseURL) {
     responded: {
       onSuccess: async (res, method) => {
         const data = await res.json()
-        
-        if (res.status === 401)
-          return router.replace('/login')
+
+        if (res.status === 401 || data?.code === 700) {
+          return message.error('登录过期，请重新登录',
+            {
+              duration:1500,
+              onLeave: () => {
+                localStorage.clear()
+                router.replace('/login')
+              }
+            }
+          )
+        }
 
 
-        if (res.status !== 200) {
+        if (data?.code !== 200) {
           console.log(data);
-          
+
           try {
             if (data?.msg) {
               message.error(data.msg)
               throw new Error(data.msg)
-            }else if(data?.message){
+            } else if (data?.message) {
               message.error(data.message)
               throw new Error(data.message)
             }

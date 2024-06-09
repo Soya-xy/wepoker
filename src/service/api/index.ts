@@ -3,6 +3,8 @@ import { alovaInstance } from '../request'
 const api = alovaInstance()
 
 export const loginApi = (e: any) => api.Post<any>('/auth', e)
+export const gameRegister = (e: any) => api.Post<any>('/gameRegister', e)
+export const getVerifyCode = (params: any) => api.Get<any>('/getVerifyCode', { params })
 export const indexApi = (params?: any) => api.Get<any>('/agentManage/stat', { params })
 export const pageList = (params?: any) => api.Get<any>('/agentGameUserManage/pageList', { params })
 export const financeManageList = (params?: any) => api.Get<any>('/financeManage/pageList', { params })

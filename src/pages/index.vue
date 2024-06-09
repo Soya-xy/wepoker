@@ -4,7 +4,7 @@ import { getTime } from '~/utils';
 
 const message = useMessage()
 const { user } = useUserStore()
-const link = ref('http://localhost:5173/#/')
+const link = ref(`https://agent.ttp8088.xyz/#/reg?agentCode=${user.agentCode}`)
 const info = ref<any>({
   coin: 0,
   memberCount: 0,
@@ -59,7 +59,7 @@ init()
       </div>
       <n-space justify="space-between" align="center" :wrap-item="false">
         <div flex flex-col sm="flex-row" items-center w-full>
-          <n-qr-code value="text" my-2 sm:my-0 />
+          <n-qr-code :value="link" my-2 sm:my-0 />
           <div ml5>
             <p text-xl my3>当前账号：{{ user.username }}</p>
             <n-tag type="info">
